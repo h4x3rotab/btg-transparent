@@ -11,8 +11,19 @@ const throttlep = n=> Ps=>
     Ps.slice(0,n).forEach(run)
   })
 
+function getLanguage() {
+  switch (navigator.language) {
+    case 'zh-TW':
+      return 'cn'
+    case 'zh-CN':
+      return 'cn'
+    default:
+      return 'en'
+  }
+}
+
 const i18n = new VueI18n({
-  locale: 'en',
+  locale: getLanguage(),
   fallbackLocale: 'en',
   messages: translations,
 })
