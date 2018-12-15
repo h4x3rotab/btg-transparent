@@ -5,8 +5,8 @@ const translations = {
         subtitle: 'All 100,000 coins mined November 12, 2017',
         total: 'Live Unspent Total',
         loading: 'loading',
-		details: 'Full mining process ',
-		linktext: 'described here.',
+	    details: 'Full mining process ',
+	    linktext: 'described here.',
         more_tools: 'More tools are coming soon.'
     },
     cn: {
