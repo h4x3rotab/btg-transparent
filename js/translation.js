@@ -2,20 +2,20 @@
 const translations = {
     en: {
         title: 'BTG Endowment Transparency',
-        subtitle: 'All 100,000 coins mined November 12, 2017',
+        subtitle: 'Live balances for all Endowment wallets',
         total: 'Live Unspent Total',
         loading: 'loading',
-	    details: 'Full mining process ',
-	    linktext: 'described here.',
+	    details: 'Total Endowment of 100,000 coins was mined Nov. 12, 2017; ',
+	    linktext: 'full mining details here.',
         more_tools: 'More tools are coming soon.'
     },
     cn: {
         title: 'BTG 今天跑路了吗？',
-        subtitle: '我倒是要看看团队有没有抛币砸盘。',
+        subtitle: '所有捐赠钱包的实时余额',
         total: '团队钱包总余额',
         loading: '载入中',
-        details: '采矿过程',
-        linktext: '这里描述的',
+        details: '2017年11月12日开采了10万枚硬币的总捐赠额',
+        linktext: '详情请点击',
         more_tools: '更多工具敬请期待'
     }
 }
