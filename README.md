@@ -1,6 +1,6 @@
 # btg-transparent
 
-This web site tracks the live balance of the BTG Endowment. Live balances, per wallet, are drawn from https://explorer.bitcoingold.org/insight/. The Live Unspent Total may take a moment to load as all wallet balances must be pulled, first.
+This web site tracks the live balance of the BTG Endowment. Live balances, per wallet, are pulled using the Insight API at https://explorer.bitcoingold.org/insight/. The Live Unspent Total may take a moment to load as all wallet balances must be pulled, first.
 
 ## Background
 
@@ -177,15 +177,18 @@ AYA9p64mwZs5HSP8W9fjcBP7hMm4p2bP8L|37.5|3|499398
 
 These were mined into four wallets, “round robin” style:
 
-491407 -> Address 1
-491408 -> Address 2
-491409 -> Address 3
-491410 -> Address 4
-491411 -> Address 1
-491412 -> Address 2
-491413 -> Address 3
-491414 -> Address 4
-491415 -> Address 1…
+block|address
+---|---
+491407 | Address 1
+491408 | Address 2
+491409 | Address 3
+491410 | Address 4
+491411 | Address 1
+491412 | Address 2
+491413 | Address 3
+491414 | Address 4
+491415 | Address 1…
+
 
 … and so on for 3200 blocks. At 800 blocks per wallet, these wallets accumulated 800 * 12.5 = 10,000 BTG each. The wallet addresses are listed below, and are also visible when looking at those block numbers in any BTG blockchain explorer.
 
@@ -197,15 +200,17 @@ Each segment was mined round-robin into four wallet addresses, much like the ear
 
 Example:
 
-494607 -> Address 5
-494608 -> Address 6
-494609 -> Address 7
-494610 -> Address 8
-494611 -> Address 5
-494612 -> Address 6
-494613 -> Address 7
-494614 -> Address 8
-494615 -> Address 5…
+block|address
+---|---
+494607 | Address 5 
+494608 | Address 6
+494609 | Address 7
+494610 | Address 8
+494611 | Address 5
+494612 | Address 6
+494613 | Address 7
+494614 | Address 8
+494615 | Address 5…
 
 During the first 132 blocks of the segment, each address received 33 block rewards of 12.5 BTG, so each received 412.5 BTG. Then, for the 133rd block, the first address received an additional 12.5, bringing the total to 425 BTG in the first wallet.
 
