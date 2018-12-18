@@ -11,11 +11,11 @@ const translations = {
     },
     cn: {
         title: 'BTG 今天跑路了吗？',
-        subtitle: '所有捐赠钱包的实时余额',
+        subtitle: '我倒是要看看团队有没有抛币砸盘。',
         total: '团队钱包总余额',
         loading: '载入中',
-        details: '2017年11月12日开采了10万枚硬币的总捐赠额',
-        linktext: '详情请点击',
+        details: '2017年11月12日，BTG在上线后获得了10万BTG矿工捐赠',
+        linktext: '详情请见',
         more_tools: '更多工具敬请期待'
     }
 }
