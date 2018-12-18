@@ -224,4 +224,4 @@ Again, all the addresses in question are 4/6 multi-sig and require four signatur
 
 The wallet details above have been public on the blockchain since November 12, 2017. The mining process is in code that was published in the BTG Github on November 12, 2017: https://github.com/BTCGPU/BTCGPU/tree/0.15.0.1
 
-The test description above was also published as a Blog Post here: https://bitcoingold.org/endowment-wallets/
+The description text above was also published as a Blog Post here: https://bitcoingold.org/endowment-wallets/
