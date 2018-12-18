@@ -1,6 +1,7 @@
-// first 152 are mined Endowment wallets, last wallet is flex spending wallet
+// first wallet is flex spending wallet (2 of 6), next 152 are mined Endowment wallets (4 of 6)
 endowments = (
-`AQS1w7wyXQjPiE29LtA8ER8DbSQii4vSk7
+`AedgJfbGhjwtUEmfGv8qci9T4FBokxgKu1
+AQS1w7wyXQjPiE29LtA8ER8DbSQii4vSk7
 AeTXqQdHLJGug6PdaQFvQZvjPM9E8wDV8u
 AMZdDm8jyZRUTxWCjwZsKbBAtdnyzyTqtN
 AV1WBeDbz27UXRy9PRveHtbnT8u2cmy1Fs
@@ -151,5 +152,4 @@ AVRfgsLaDaTGeV1AtczESj2tH7qz3hZF38
 AX3cgiZtM2qyb7Z27E4vRzEXqvKMaE6zFJ
 AaVTNXxLqAvyGJhN7MuaPNXvFSLaJJmVUy
 AcE7A1H8WgnYkbQJNEA32oVJvQoF6kb4er
-AYA9p64mwZs5HSP8W9fjcBP7hMm4p2bP8L
-AedgJfbGhjwtUEmfGv8qci9T4FBokxgKu1`.split('\n'));
+AYA9p64mwZs5HSP8W9fjcBP7hMm4p2bP8L`.split('\n'));
