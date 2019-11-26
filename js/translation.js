@@ -9,6 +9,15 @@ const translations = {
 	    linktext: 'full mining details here.',
         more_tools: 'More tools are coming soon.'
     },
+    ar: {
+        title: 'عرض وقف بي تي جي',
+        subtitle: 'أرصدة حية لجميع محافظ الوقف',
+        total: 'المجموع غير المنفق',
+        loading: 'جاري التحميل',
+        details: 'تم تعدين ما يساوي 100000 وحدة نقدية في 12 نوفمبر 2017 ',
+        linktext: 'كامل تفاصيل التعدين هنا',
+        more_tools: 'سوف يتم طرح المزيد من الأدوات قريبا'
+    },
     cn: {
         title: 'BTG 今天跑路了吗？',
         subtitle: '所有捐赠钱包的实时余额',
