@@ -17,6 +17,8 @@ function getLanguage() {
       return 'cn'
     case 'zh-CN':
       return 'cn'
+    case 'ar':
+      return 'ar'
     default:
       return 'en'
   }
