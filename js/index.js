@@ -28,35 +28,49 @@ const i18n = new VueI18n({
   messages: translations,
 })
 
+EXP_CHAIN = 'https://explorer.bitcoingold.org/insight-api/blocks';
 EXP_BALANCE = 'https://explorer.bitcoingold.org/insight-api/addr/{addr}/balance';
 
 // Create a Vue instance with `i18n` option
 new Vue({
   i18n,
   data: {
-    wallets: endowments.map(w => {return {addr: w, balance: null}}),
+    wallets: endowments.map(([w, cltv]) => {return {addr: w, balance: null, cltv: cltv}}),
     totalBalance: -1,
+    totalUnlockedBalance: -1,
+    chaintip: -1,
   },
   methods: {
     sattobtg(sat, prec) {
       prec = prec || 4
       return (sat / 1e8).toFixed(prec) + ' BTG';
     },
-    getbalance(w) {
-      return this.$http.get(EXP_BALANCE.replace('{addr}', w.addr)).then(result => {
-        w.balance = parseInt(result.body);
-      });
+    async getblocktip() {
+      const result = await this.$http.get(EXP_CHAIN);
+      const obj = await result.json();
+      this.chaintip = obj.blocks[0].height;
     },
-    fetchall() {
-      const downloadActions = this.wallets.map(w => () => this.getbalance(w));
-      throttlep(10)(downloadActions).then(this.onbalanceready);
+    async getbalance(w) {
+      const result = await this.$http.get(EXP_BALANCE.replace('{addr}', w.addr));
+      w.balance = parseInt(result.body);
+    },
+    async fetchall() {
+      const downloadActions = [(() => this.getblocktip())]
+        .concat(this.wallets.map(w => (() => this.getbalance(w))));
+      await throttlep(10)(downloadActions)
+      this.onbalanceready();
     },
     onbalanceready() {
       let sum = 0;
+      let unlockedSum = 0;
       this.wallets.forEach(w => {
         sum += w.balance;
+        if (this.chaintip >= w.cltv) {
+          unlockedSum += w.balance;
+        }
       });
       this.totalBalance = sum;
+      this.totalUnlockedBalance = unlockedSum;
     }
   },
   mounted() {
