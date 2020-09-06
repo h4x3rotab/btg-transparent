@@ -1,5 +1,6 @@
 // first wallet is flex spending wallet (2 of 6), next 152 are mined Endowment wallets (4 of 6)
 endowments = [
+  ['ANsydmmdX8dhX3jTYPNnyBQLHh6XqTPAvM',0],
   ['AedgJfbGhjwtUEmfGv8qci9T4FBokxgKu1',0],
   ['AQS1w7wyXQjPiE29LtA8ER8DbSQii4vSk7',0],
   ['AeTXqQdHLJGug6PdaQFvQZvjPM9E8wDV8u',0],
