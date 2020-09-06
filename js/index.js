@@ -17,6 +17,10 @@ function getLanguage() {
       return 'cn'
     case 'zh-CN':
       return 'cn'
+    case 'ar':
+      return 'ar'
+	case 'pl':
+	  return 'pl'
     default:
       return 'en'
   }
