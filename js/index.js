@@ -39,7 +39,7 @@ EXP_BALANCE = 'https://explorer.bitcoingold.org/insight-api/addr/{addr}/balance'
 new Vue({
   i18n,
   data: {
-    wallets: endowments.map(([w, cltv]) => {return {addr: w, balance: null, cltv: cltv}}),
+    wallets: endowments.map(([w, cltv, enabled]) => {return {addr: w, balance: null, cltv: cltv, enabled}}),
     totalBalance: -1,
     totalUnlockedBalance: -1,
     chaintip: -1,
@@ -55,8 +55,12 @@ new Vue({
       this.chaintip = obj.blocks[0].height;
     },
     async getbalance(w) {
-      const result = await this.$http.get(EXP_BALANCE.replace('{addr}', w.addr));
-      w.balance = parseInt(result.body);
+      if (w.enabled) {
+        const result = await this.$http.get(EXP_BALANCE.replace('{addr}', w.addr));
+        w.balance = parseInt(result.body);
+      } else {
+        w.balance = 0;
+      }
     },
     async fetchall() {
       const downloadActions = [(() => this.getblocktip())]

@@ -1,7 +1,16 @@
 // first wallet is flex spending wallet (2 of 6), next 152 are mined Endowment wallets (4 of 6)
 endowments = [
-  ['ANsydmmdX8dhX3jTYPNnyBQLHh6XqTPAvM',0],
-  ['AedgJfbGhjwtUEmfGv8qci9T4FBokxgKu1',0],
+  // First 5 new endowment wallets
+  ['AZC9QwCx3sB5n6STccPg9owpprwo1q4qh5', 0, true],
+  ['ATErh1ezcC6nf7VkZ7juVuKgSCExSZ2nz3', 0, true],
+  ['AVsVXATCdNXgFiJ3FgX9vjq2niN8HpKZcQ', 0, true],
+  ['AQHjse6ekJvNpvnjH2mvRUMtiBVGMow3qi', 0, true],
+  ['ALWDRj1qgx7cvVdLNVKXEYerR8xkQ2RWwu', 0, true],
+  // Current flex wallet
+  ['ANsydmmdX8dhX3jTYPNnyBQLHh6XqTPAvM',0, true],
+  // Legacy flex wallet
+  ['AedgJfbGhjwtUEmfGv8qci9T4FBokxgKu1',0, true],
+  // Legacy endowment wallets
   ['AQS1w7wyXQjPiE29LtA8ER8DbSQii4vSk7',0],
   ['AeTXqQdHLJGug6PdaQFvQZvjPM9E8wDV8u',0],
   ['AMZdDm8jyZRUTxWCjwZsKbBAtdnyzyTqtN',0],
