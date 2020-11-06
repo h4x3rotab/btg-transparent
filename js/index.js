@@ -34,6 +34,7 @@ const i18n = new VueI18n({
 
 EXP_CHAIN = 'https://explorer.bitcoingold.org/insight-api/blocks';
 EXP_BALANCE = 'https://explorer.bitcoingold.org/insight-api/addr/{addr}/balance';
+EXP_UNCONF_BALANCE = 'https://explorer.bitcoingold.org/insight-api/addr/{addr}/unconfirmedBalance';
 
 // Create a Vue instance with `i18n` option
 new Vue({
@@ -56,8 +57,9 @@ new Vue({
     },
     async getbalance(w) {
       if (w.enabled) {
-        const result = await this.$http.get(EXP_BALANCE.replace('{addr}', w.addr));
-        w.balance = parseInt(result.body);
+        const resultConf = await this.$http.get(EXP_BALANCE.replace('{addr}', w.addr));
+        const resultUnconf = await this.$http.get(EXP_UNCONF_BALANCE.replace('{addr}', w.addr));
+        w.balance = parseInt(resultConf.body) + parseInt(resultUnconf.body);
       } else {
         w.balance = 0;
       }
