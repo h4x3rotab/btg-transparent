@@ -12,7 +12,7 @@ All fund expenditures have been made based on the decisions of the Board of the 
 
 To simplify administration, funds are periodically moved from an Endowment wallet into a "Flex Spending" wallet which requires 2 of 6 signatures. Expense reimbursements, salaries, and bounties are then paid from the Flex wallet. Any funds in the Flex wallet are unspent and belong to the Endowment.
 
-# Endowment Wallets
+## Endowment Wallets
 
 > AedgJfbGhjwtUEmfGv8qci9T4FBokxgKu1 <-- Flex Spending Wallet
 
@@ -171,9 +171,9 @@ AaVTNXxLqAvyGJhN7MuaPNXvFSLaJJmVUy|37.5|3|499396
 AcE7A1H8WgnYkbQJNEA32oVJvQoF6kb4er|37.5|3|499397
 AYA9p64mwZs5HSP8W9fjcBP7hMm4p2bP8L|37.5|3|499398
 
-# Mining Process
+## Mining Process
 
-## First 3200 blocks (40,000 BTG)
+### First 3200 blocks (40,000 BTG)
 
 These were mined into four wallets, “round robin” style:
 
@@ -192,7 +192,7 @@ block|address
 
 … and so on for 3200 blocks. At 800 blocks per wallet, these wallets accumulated 800 * 12.5 = 10,000 BTG each. The wallet addresses are listed below, and are also visible when looking at those block numbers in any BTG blockchain explorer.
 
-## The next 4800 blocks (60,000 BTG)
+### The next 4800 blocks (60,000 BTG)
 
 The remaining blocks were divided into roughly 36 segments to unlock monthly over the course of three years. (Dividing 4800 into 36 would actually be 133.33 blocks per segment; instead, 36 segments of 133 blocks were created and a 37th segment with the remaining 12 blocks.)
 
@@ -220,8 +220,31 @@ After these 133 blocks were done, mining advanced to the next segment, which did
 
 Again, all the addresses in question are 4/6 multi-sig and require four signatures to withdraw funds, in addition to the time locks.
 
-# History
+## History
 
 The wallet details above have been public on the blockchain since November 12, 2017. The mining process is in code that was published in the BTG Github on November 12, 2017: https://github.com/BTCGPU/BTCGPU/tree/0.15.0.1
 
 The description text above was also published as a Blog Post here: https://bitcoingold.org/endowment-wallets/
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

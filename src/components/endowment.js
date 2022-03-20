@@ -1,5 +1,5 @@
 // first wallet is flex spending wallet (2 of 6), next 152 are mined Endowment wallets (4 of 6)
-endowments = [
+export default [
   // First 5 new endowment wallets
   ['AZC9QwCx3sB5n6STccPg9owpprwo1q4qh5', 0, true],
   ['ATErh1ezcC6nf7VkZ7juVuKgSCExSZ2nz3', 0, true],
